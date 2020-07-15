@@ -5,12 +5,18 @@
 module.exports = {
 //configuration for development database
   development: {
-    client: "sqlite3",
+    client: "sqlite3", //database driver
     connection: {
-      filename: "./data/car-dealer.db3"
+      filename: "./data/car-dealer.db3" //from the root folder and also changed the path to current
     },
     useNullAsDefault: true, // this is only needed for SQLite
+    migration: {
+      directory: "./migrations"
+    }
   },
+
+
+
 
   staging: {
     client: "postgresql",
@@ -28,6 +34,7 @@ module.exports = {
     }
   },
 
+//configuration for development database
   production: {
     client: "postgresql",
     connection: {
