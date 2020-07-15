@@ -11,7 +11,7 @@ module.exports = {
     },
     useNullAsDefault: true, // this is only needed for SQLite
     migration: {
-      directory: "./migrations"
+      directory: "./migrations"//migration for each changes during table construction imported
     }
   },
 
